@@ -1,4 +1,3 @@
-import { MdIndeterminateCheckBox } from "react-icons/md";
 import styled from "styled-components";
 
 export const InfoContainer = styled.div`
@@ -25,7 +24,7 @@ export const InfoWrapper = styled.div`
 
 export const InfoRow = styled.div`
     display: grid;
-    grid-auto-columns: MdIndeterminateCheckBox(auto, 1fr);
+    grid-auto-columns: minmax(auto, 1fr);
     align-items: center;
     grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2`)};
 

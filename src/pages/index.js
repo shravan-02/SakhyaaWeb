@@ -5,10 +5,10 @@ import HeroSection from '../components/HeroSection'
 import InfoSection from '../components/InfoSection'
 import { homeObjOne } from '../components/InfoSection/Data'
 const Home = () => {
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState(false);
 
     const toggle = () => {
-        setIsOpen(!isOpen)
+        setIsOpen(!isOpen);
     }
 
 

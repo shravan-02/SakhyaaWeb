@@ -8,8 +8,8 @@ export const homeObjOne = {
     description: 'Login and make your own account with a custom portfolio',
     buttonLabel: 'Get Started', 
     imgStart: false,
-    img: require('../../images/svg1.svg'),
-    alt: 'Car',
+    img: require('../../images/img1.png'),
+    alt: 'money',
     dark: true,
     primary: true,
     darkText: true
