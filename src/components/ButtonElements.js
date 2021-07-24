@@ -6,11 +6,11 @@ export const Button = styled(Link)`
     border-radius: 50px;
     background: ${({primary}) => (primary ? '#F72A85' : '#934cff')};
     white-space: nowrap;
-    padding: ${({big}) => (big ? '14px 48px' : '12x 30px' )};
-    color: ${({dark}) => (dark ? '#fff' : '#fff' )};
-    font-size: ${({fontBig}) => (fontBig ? '20px' : '16px' )};
+    // padding: ${({big}) => (big ? '14px 48px' : '12x 30px')};
+    padding: ${({big}) => (big ? '12x 30px' : '14px 48px')};
+    color: ${({dark}) => (dark ? '#fff' : '#fff')};
+    font-size: ${({fontBig}) => (fontBig ? '20px' : '16px')};
     outline: none;
-    font-weight: 500px;
     border: none;
     cursor: pointer;
     display: flex;

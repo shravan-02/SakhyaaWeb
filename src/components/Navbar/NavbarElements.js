@@ -3,7 +3,7 @@ import { Link as LinkR} from 'react-router-dom'
 import { Link as LinkS} from 'react-scroll'
 
 export const Nav = styled.nav`
-    background: #fee9f2 ;
+    background: ${({scrollNav}) => (scrollNav ? '#121212' : 'transparent')} ;
     height: 80px;
     margin-top: -100px;
     display: flex;
@@ -30,7 +30,7 @@ export const NavbarContainer = styled.div`
 `    
 
 export const NavLogo = styled(LinkR)`
-    color: #f72a85;
+    color: #fff;
     justify-self: flex-start;
     cursor: pointer;
     font-size: 1.5rem;
@@ -38,6 +38,7 @@ export const NavLogo = styled(LinkR)`
     align-items: center;
     margin-left: 24px;
     text-decoration: none;
+    font-weight: bold;
 
     &:hover{
         transition: all 0.4s ease-in-out;
@@ -56,7 +57,7 @@ export const MobileIcon = styled.div`
         transform: translate(-100%, 60%);
         font-size: 1.8rem;
         cursor: pointer; 
-        color: #f72a85;
+        color: #fff;
 
         &:hover {
             color: #934cff;
@@ -82,7 +83,7 @@ export const NavItem = styled.li`
 `
 
 export const NavLinks = styled(LinkS)`
-    color: #000000;
+    color: #f7f8fa;
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -90,8 +91,8 @@ export const NavLinks = styled(LinkS)`
     height: 100%;
     cursor: pointer;
 
-    &:active{
-        border-bottom: 3px solid #F72A85; 
+    &.active {
+        border-bottom: 3px solid #01bf71; 
     }
 `
 
@@ -124,3 +125,4 @@ export const NavBtnLink = styled(LinkR)`
         color: #fff;
     }
 `
+

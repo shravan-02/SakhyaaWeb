@@ -15,8 +15,8 @@ const Sidebar = ({isOpen, toggle}) => {
                     <SidebarLink to="post" onClick={toggle}>
                         Post
                     </SidebarLink>
-                    <SidebarLink to="how" onClick={toggle}>
-                        How It Works
+                    <SidebarLink to="services" onClick={toggle}>
+                        Services
                     </SidebarLink>
                     <SidebarLink to="signin" onClick={toggle}>
                         Sign In

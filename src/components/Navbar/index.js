@@ -1,13 +1,34 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import {FaBars} from 'react-icons/fa';
+import { IconContext } from 'react-icons/lib';
+import { animateScroll as scroll } from 'react-scroll';
 import {Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, NavBtn, NavBtnLink} from './NavbarElements'
 
 const Navbar = ({toggle}) => {
+    const [scrollNav, setScrollNav] = useState(false)
+
+    const changeNav  = () => {
+        if(window.scrollY >= 80){
+            setScrollNav(true)
+        } else {
+            setScrollNav(false)
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll',changeNav )
+    }, [])
+
+    const toggleHome = () =>{
+        scroll.scrollToTop();
+    }
+
+
     return (
         <>
-           <Nav>
+           <Nav scrollNav = {scrollNav}>
                <NavbarContainer>
-                   <NavLogo to='home' >
+                   <NavLogo to='/' onClick={toggleHome}>
                        Sakhyaa
                    </NavLogo>
                    <MobileIcon onClick={toggle} >
@@ -15,16 +36,40 @@ const Navbar = ({toggle}) => {
                    </MobileIcon>
                    <NavMenu>
                        <NavItem>
-                           <NavLinks to="about">About</NavLinks>
+                           <NavLinks to="about" 
+                            smooth = {true}
+                            duration = {500} 
+                            spy = {true}
+                            exact = 'true'
+                            // offset = {-80}
+                           >About</NavLinks>
                        </NavItem>
                        <NavItem>
-                           <NavLinks to="post">Post</NavLinks>
+                           <NavLinks to="services"
+                           smooth = {true}
+                           duration = {500} 
+                           spy = {true}
+                        //    offset = {-80}
+                           exact = 'true'
+                           >Services</NavLinks>
                        </NavItem>
                        <NavItem>
-                           <NavLinks to="how">How It Works</NavLinks>
+                           <NavLinks to="post"
+                           smooth = {true}
+                           duration = {500} 
+                           spy = {true}
+                           exact = 'true'
+                        //    offset = {-80}
+                           >Post</NavLinks>
                        </NavItem>
                        <NavItem>
-                           <NavLinks to="signin">Sign In</NavLinks>
+                           <NavLinks to="signin"
+                           smooth = {true}
+                           duration = {500} 
+                           spy = {true}
+                           exact = 'true'
+                        //    offset = {-80}
+                           >Sign In</NavLinks>
                        </NavItem>
                    </NavMenu>
                    <NavBtn>
